@@ -12,7 +12,8 @@ export type AgentType =
   | 'gemini-cli'
   | 'qoder'
   | 'qwen-code'
-  | 'trae';
+  | 'trae'
+  | 'kiro';
 
 /**
  * MCP Server configuration

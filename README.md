@@ -13,7 +13,7 @@ MCP Configuration Manager - Manage MCP server configurations across AI Agents.
 
 <!-- agent-list:start -->
 
-Supports **Cursor**, **Claude Code**, **Antigravity**, **Windsurf**, **VS Code**, and [6 more](#supported-agents).
+Supports **Cursor**, **Claude Code**, **Antigravity**, **Windsurf**, **VS Code**, and [7 more](#supported-agents).
 
 <!-- agent-list:end -->
 
@@ -183,6 +183,7 @@ npx mcpcm sync --from cursor --to-all
 | Qoder                    | `qoder`       | -                           | (managed via `qodercli`)                           |
 | Qwen Code                | `qwen-code`   | `.qwen/settings.json`       | `~/.qwen/settings.json`                            |
 | Trae                     | `trae`        | `.trae/mcp.json`            | -                                                  |
+| Kiro                     | `kiro`        | `.kiro/settings/mcp.json`   | `~/.kiro/settings/mcp.json`                        |
 
 <!-- available-agents:end -->
 

@@ -129,6 +129,15 @@ export const agents: Record<AgentType, AgentConfig> = {
     mcpConfigKey: 'mcpServers',
     detectInstalled: async () => existsSync(join(process.cwd(), '.trae')),
   },
+  kiro: {
+    name: 'kiro',
+    displayName: 'Kiro',
+    projectConfigPath: '.kiro/settings/mcp.json',
+    globalConfigPath: join(home, '.kiro/settings/mcp.json'),
+    configFormat: 'json',
+    mcpConfigKey: 'mcpServers',
+    detectInstalled: async () => existsSync(join(home, '.kiro')),
+  },
 };
 
 /**

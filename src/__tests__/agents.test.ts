@@ -16,11 +16,12 @@ describe('agents', () => {
       expect(types).toContain('qoder');
       expect(types).toContain('qwen-code');
       expect(types).toContain('trae');
+      expect(types).toContain('kiro');
     });
 
-    it('should return 11 agent types', () => {
+    it('should return 12 agent types', () => {
       const types = getAllAgentTypes();
-      expect(types).toHaveLength(11);
+      expect(types).toHaveLength(12);
     });
   });
 
@@ -55,6 +56,15 @@ describe('agents', () => {
       expect(config.mcpConfigKey).toBe('servers');
     });
 
+    it('should return kiro config', () => {
+      const config = getAgentConfig('kiro');
+      expect(config.name).toBe('kiro');
+      expect(config.displayName).toBe('Kiro');
+      expect(config.projectConfigPath).toBe('.kiro/settings/mcp.json');
+      expect(config.globalConfigPath).toContain('.kiro/settings/mcp.json');
+      expect(config.mcpConfigKey).toBe('mcpServers');
+    });
+
     it('should return qoder config with null paths', () => {
       const config = getAgentConfig('qoder');
       expect(config.name).toBe('qoder');
@@ -72,6 +82,7 @@ describe('agents', () => {
       expect(isValidAgentType('windsurf')).toBe(true);
       expect(isValidAgentType('vscode')).toBe(true);
       expect(isValidAgentType('codex')).toBe(true);
+      expect(isValidAgentType('kiro')).toBe(true);
     });
 
     it('should return false for invalid agent types', () => {

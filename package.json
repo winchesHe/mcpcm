@@ -1,6 +1,6 @@
 {
-  "name": "mcpcm",
-  "version": "1.0.3",
+  "name": "@winches/mcpcm",
+  "version": "1.0.0",
   "description": "MCP Configuration Manager - Manage MCP configs across AI Agents",
   "type": "module",
   "bin": {
@@ -10,6 +10,10 @@
     "dist",
     "README.md"
   ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "build": "tsup src/cli.ts --format esm --clean",
     "dev": "tsx src/cli.ts",
@@ -36,13 +40,14 @@
     "qoder",
     "opencode",
     "gemini-cli",
+    "kiro",
     "skill"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/asteriskzuo/mcpcm.git"
   },
-  "author": "asteriskzuo <zuoyuhsywn@hotmail.com>",
+  "author": "winches",
   "license": "MIT",
   "dependencies": {
     "@clack/prompts": "^0.11.0",
